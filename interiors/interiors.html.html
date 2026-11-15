@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AURA INTERIORS | Modern residential and commercial interior design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#f6f1e7;--paper:#fbf8f1;--brown:#2e211a;--brown-2:#4a372b;--gold:#b79a5b;--gold-2:#d4bc86;
+  --line:#e0d6c3;--muted:#6f5f53;
+  --head:"Cormorant Garamond",Georgia,"Times New Roman",serif;--body:"Jost","Helvetica Neue",Arial,sans-serif;
+  color-scheme:light;box-sizing:border-box;
+  padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px);
+  -webkit-text-size-adjust:100%;
+}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--cream);color:var(--brown);font-family:var(--body);font-weight:300;line-height:1.7;font-size:1.06rem}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{width:min(1120px,100% - 2rem);margin-inline:auto}
+section{padding:6rem 0}
+h1,h2,h3{font-family:var(--head);font-weight:500;line-height:1.05;margin:0;letter-spacing:-.005em}
+h2{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:1rem}
+p{margin:0}.lead{color:var(--muted);max-width:56ch}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(246,241,231,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:.8rem 0;flex-wrap:wrap}
+.brand{font-family:var(--head);font-weight:600;font-size:1.5rem;letter-spacing:.22em}
+.brand span{font-family:var(--body);font-weight:300;font-size:.85rem;letter-spacing:.2em;margin-left:.6rem;color:var(--muted)}
+nav{display:flex;gap:.1rem;overflow-x:auto;max-width:100%;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{display:inline-flex;align-items:center;min-height:40px;padding:.3rem .8rem;color:var(--muted);font-size:.95rem;font-weight:400;white-space:nowrap}
+nav a:hover{color:var(--brown)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.7rem 1.9rem;font:400 1rem var(--body);letter-spacing:.03em;border:1px solid var(--brown);cursor:pointer;border-radius:0}
+.btn.solid{background:var(--brown);color:var(--cream)}.btn.solid:hover{background:var(--brown-2)}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:var(--brown)}.btn.gold:hover{background:var(--gold-2)}
+.btn.ghost:hover{background:rgba(46,33,26,.06)}
+.bar .btn{min-height:40px;padding:.4rem 1.3rem;font-size:.92rem}
+
+/* Hero */
+#home{padding:4.5rem 0 6rem;overflow-x:clip}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center}
+.hero h1{font-size:clamp(3rem,8vw,6rem);margin-bottom:1.5rem;font-weight:500}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero .lead{margin-bottom:2.25rem;font-size:1.15rem}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap}
+.facts{display:flex;gap:2.5rem;margin-top:3.25rem;padding-top:1.5rem;border-top:1px solid var(--line);flex-wrap:wrap;color:var(--muted);font-size:.95rem}
+.facts strong{display:block;color:var(--brown);font:500 1.5rem var(--head)}
+.arch{position:relative;width:min(100%,400px);aspect-ratio:3/4;margin-inline:auto;border-radius:999px 999px 0 0;background:linear-gradient(180deg,#efe3c8 0%,var(--gold-2) 55%,var(--gold) 100%);box-shadow:20px 20px 0 -1px var(--brown)}
+.arch::before{content:"";position:absolute;inset:7% 8% 0;border:1px solid rgba(46,33,26,.35);border-bottom:0;border-radius:999px 999px 0 0}
+.arch::after{content:"";position:absolute;left:50%;bottom:0;width:100%;height:16%;transform:translateX(-50%);background:var(--brown)}
+.orb{position:absolute;left:50%;bottom:16%;width:26%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle at 35% 30%,#6a523f,var(--brown));z-index:1;box-shadow:0 10px 18px rgba(0,0,0,.25)}
+.orb+.orb{width:15%;left:72%;bottom:16%;background:radial-gradient(circle at 35% 30%,#f2e5c4,var(--gold))}
+
+.head{margin-bottom:3rem}
+.grid{display:grid;gap:1.5rem}
+
+/* About */
+#about{background:var(--paper);border-block:1px solid var(--line)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.about p+p{margin-top:1.1rem}.about .lead{max-width:none}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.stats div{border-top:1px solid var(--gold);padding-top:1rem}
+.stats strong{display:block;font:500 2.6rem/1 var(--head)}
+.stats span{color:var(--muted);font-size:.95rem}
+
+/* Services */
+.services{grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:2rem}
+.svc{background:var(--paper);border:1px solid var(--line);padding:2.25rem}
+.svc h3{font-size:2rem;margin-bottom:.6rem}
+.svc p{color:var(--muted);margin-bottom:1.25rem}
+.svc ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:.5rem 1rem}
+.svc li{position:relative;padding-left:1.2rem;font-size:.97rem}
+.svc li::before{content:"";position:absolute;left:0;top:.75em;width:.6rem;height:1px;background:var(--gold)}
+
+/* Projects */
+#projects{background:var(--paper);border-block:1px solid var(--line)}
+.gallery{grid-template-columns:repeat(3,1fr);grid-auto-rows:240px;gap:1rem}
+.tile{position:relative;overflow:hidden;min-height:0}
+.tile.tall{grid-row:span 2}
+.tile::before{content:"";position:absolute;left:50%;bottom:0;width:46%;height:60%;transform:translateX(-50%);border-radius:999px 999px 0 0;background:rgba(255,255,255,.2)}
+.tile::after{content:"";position:absolute;right:12%;top:12%;width:42px;height:42px;border-radius:50%;background:rgba(255,244,214,.75);filter:blur(1px)}
+.tile figcaption{position:absolute;left:0;bottom:0;background:var(--cream);padding:.7rem 1.1rem;z-index:1;max-width:85%}
+.tile figcaption b{display:block;font:500 1.25rem/1.2 var(--head)}
+.tile figcaption span{color:var(--muted);font-size:.85rem}
+.t1{background:linear-gradient(160deg,#d9c7a3,#8a6f4a)}.t2{background:linear-gradient(160deg,#cfd3c4,#6c7a64)}
+.t3{background:linear-gradient(160deg,#e6ddd0,#a89480)}.t4{background:linear-gradient(160deg,#4a372b,#1f1510)}
+.t5{background:linear-gradient(160deg,#d8cdbd,#7b5f48)}.t6{background:linear-gradient(160deg,#e9e1d3,#b9a98f)}
+.note{color:var(--muted);font-size:.9rem;margin-top:1.5rem}
+
+/* Process */
+#process{background:var(--brown);color:var(--cream)}
+#process .lead{color:#cbbba6}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem}
+.steps li{border-top:1px solid var(--gold);padding-top:1.25rem}
+.steps b{display:block;font:500 2.6rem/1 var(--head);color:var(--gold);margin-bottom:.8rem}
+.steps h3{font-size:1.5rem;margin-bottom:.5rem}
+.steps p{color:#cbbba6;font-size:.95rem}
+
+/* Testimonials */
+.quotes{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:2rem}
+blockquote{margin:0;background:var(--paper);border:1px solid var(--line);padding:2rem;display:flex;flex-direction:column;gap:1.5rem}
+blockquote p{font:500 1.35rem/1.45 var(--head);flex:1}
+blockquote footer{font-size:.93rem;color:var(--muted)}
+blockquote footer b{display:block;color:var(--brown);font-weight:500}
+
+/* Contact */
+#contact{background:var(--paper);border-top:1px solid var(--line)}
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:4rem}
+.contact ul{list-style:none;padding:0;margin:2rem 0 0;display:grid;gap:1rem;color:var(--muted)}
+.contact li strong{display:block;color:var(--brown);font-weight:500}
+.contact li{overflow-wrap:anywhere}
+form{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+label{display:grid;gap:.4rem;font-size:.93rem;color:var(--muted)}
+label.full,form .btn{grid-column:1/-1}
+input,select,textarea{font:inherit;color:var(--brown);background:var(--cream);border:1px solid var(--line);border-radius:0;padding:.75rem 1rem;min-height:48px;width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);border-color:transparent}
+textarea{min-height:120px;resize:vertical}
+body>footer{background:var(--brown);color:#cbbba6;padding:1.75rem 0;font-size:.92rem}
+body>footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+
+@media (max-width:980px){.steps{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}}
+@media (max-width:820px){
+  section{padding:4.25rem 0}
+  .hero,.about,.contact{grid-template-columns:1fr;gap:2.75rem}
+  .arch{width:min(100%,300px);box-shadow:14px 14px 0 -1px var(--brown)}
+  .bar .btn{display:none}
+  nav{width:100%}
+}
+@media (max-width:520px){
+  body{font-size:1rem}
+  section{padding:3.5rem 0}
+  #home{padding:2.5rem 0 3.5rem}
+  .cta .btn{flex:1 1 100%}
+  .facts{gap:1.5rem}
+  .svc{padding:1.5rem}.svc ul{grid-template-columns:1fr}
+  .steps,.gallery,form{grid-template-columns:1fr}
+  .tile.tall{grid-row:auto}
+  blockquote{padding:1.5rem}
+  .brand span{display:none}
+  body>footer .wrap{flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.back{position:fixed;left:max(1rem,env(safe-area-inset-left,0px));bottom:max(1rem,env(safe-area-inset-bottom,0px));z-index:50;display:inline-flex;align-items:center;gap:.4rem;min-height:44px;padding:.6rem 1.2rem;border-radius:999px;font:500 .95rem/1 var(--body);box-shadow:0 8px 24px rgba(0,0,0,.35);background:var(--brown);color:var(--cream);border:1px solid var(--gold);border-radius:0;}
+.back:hover{filter:brightness(1.08)}
+body>footer{padding-bottom:5.25rem}
+</style>
+</head>
+<body>
+<a class="back" href="../index.html">← Back to portfolio</a>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#home">AURA<span>INTERIORS</span></a>
+    <nav aria-label="Main">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#process">Process</a><a href="#testimonials">Reviews</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn solid" href="#contact">Book a consultation</a>
+  </div>
+</header>
+
+<main>
+<section id="home">
+  <div class="wrap hero">
+    <div>
+      <h1>Spaces that feel <em>quietly</em> extraordinary.</h1>
+      <p class="lead">AURA INTERIORS designs modern homes and commercial spaces with warm materials, soft light and careful detail, from the first sketch to the final styling.</p>
+      <div class="cta">
+        <a class="btn solid" href="#contact">Book a consultation</a>
+        <a class="btn ghost" href="#projects">View our projects</a>
+      </div>
+      <div class="facts">
+        <div><strong>Homes and offices</strong>residential and commercial</div>
+        <div><strong>Free</strong>first consultation</div>
+        <div><strong>Thiruvananthapuram</strong>studio and showroom</div>
+      </div>
+    </div>
+    <div class="arch" aria-hidden="true"><div class="orb"></div><div class="orb"></div></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div>
+      <h2>A calm, considered approach to design</h2>
+      <p class="lead">AURA INTERIORS is a design studio for people who want their space to feel effortless. We believe good interiors start with how you live and work, then bring in natural materials, balanced light and furniture made to last.</p>
+      <p class="lead">Our team of designers, architects and project managers looks after everything, so you deal with one studio from concept to handover.</p>
+    </div>
+    <div class="stats">
+      <div><strong>10+</strong><span>years of design experience</span></div>
+      <div><strong>150+</strong><span>spaces completed</span></div>
+      <div><strong>1</strong><span>studio managing every detail</span></div>
+      <div><strong>5 years</strong><span>workmanship guarantee</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head"><h2>Our services</h2><p class="lead">Full interior design for homes and businesses, with clear scopes and fixed fees.</p></div>
+    <div class="grid services">
+      <div class="svc">
+        <h3>Residential design</h3>
+        <p>Apartments, villas and townhouses designed around the way your family lives.</p>
+        <ul><li>Space planning</li><li>Kitchens and wardrobes</li><li>Lighting design</li><li>Custom furniture</li><li>Material selection</li><li>Styling and decor</li></ul>
+      </div>
+      <div class="svc">
+        <h3>Commercial design</h3>
+        <p>Offices, hotels, restaurants and shops that strengthen your brand and welcome your guests.</p>
+        <ul><li>Office fit-outs</li><li>Hospitality interiors</li><li>Retail and showrooms</li><li>Clinics and salons</li><li>Brand environments</li><li>Project management</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="head"><h2>Selected projects</h2><p class="lead">A look at recent homes and commercial spaces from the studio.</p></div>
+    <div class="grid gallery">
+      <figure class="tile t1 tall" style="margin:0"><figcaption><b>Kovalam Beach Villa</b><span>Residential, 4 bedrooms</span></figcaption></figure>
+      <figure class="tile t2" style="margin:0"><figcaption><b>Technopark Workspace</b><span>Commercial, 6,000 sq ft</span></figcaption></figure>
+      <figure class="tile t3" style="margin:0"><figcaption><b>Pattom Penthouse</b><span>Residential</span></figcaption></figure>
+      <figure class="tile t4" style="margin:0"><figcaption><b>Fort Boutique Hotel</b><span>Hospitality, lobby and lounge</span></figcaption></figure>
+      <figure class="tile t5 tall" style="margin:0"><figcaption><b>Kowdiar Townhouse</b><span>Residential</span></figcaption></figure>
+      <figure class="tile t6" style="margin:0"><figcaption><b>Lumen Skin Clinic</b><span>Commercial</span></figcaption></figure>
+    </div>
+    <p class="note">Sample projects shown for demonstration. Photography to be added.</p>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="head"><h2>How we work</h2><p class="lead">Five clear steps, with a review at the end of each one.</p></div>
+    <ol class="steps">
+      <li><b>1</b><h3>Consultation</h3><p>We visit your space, listen to your needs and agree a budget and timeline.</p></li>
+      <li><b>2</b><h3>Concept</h3><p>You receive a moodboard, layout options and a palette of materials.</p></li>
+      <li><b>3</b><h3>Design</h3><p>We prepare detailed drawings and realistic 3D views for your approval.</p></li>
+      <li><b>4</b><h3>Build</h3><p>Our team manages suppliers and craftspeople and keeps you updated weekly.</p></li>
+      <li><b>5</b><h3>Handover</h3><p>We style the space, check every detail and hand you the keys.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="wrap">
+    <div class="head"><h2>Kind words from clients</h2><p class="lead">Sample reviews for demonstration.</p></div>
+    <div class="grid quotes">
+      <blockquote><p>“They understood our family in the first meeting. The house feels calm, bright and completely ours.”</p><footer><b>Anjali Pillai</b>Homeowner, Kovalam</footer></blockquote>
+      <blockquote><p>“The office was finished on schedule and our team loves working in it. Clients comment on it every week.”</p><footer><b>Vishnu Nair</b>Director, Technopark company</footer></blockquote>
+      <blockquote><p>“Beautiful design and honest communication. Our hotel lobby now sets the tone for the whole stay.”</p><footer><b>Farah Khan</b>Owner, Fort Boutique Hotel</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact">
+    <div>
+      <h2>Tell us about your space</h2>
+      <p class="lead">Share a few details and a designer will reply within one working day to arrange your free consultation.</p>
+      <ul>
+        <li><strong>Studio</strong>AURA INTERIORS, MG Road, Thiruvananthapuram 695001</li>
+        <li><strong>Hours</strong>Monday to Saturday, 10:00 to 18:00</li>
+        <li><strong>Phone</strong>+91 00000 00000</li>
+        <li><strong>Email</strong>hello@aurainteriors.example</li>
+      </ul>
+    </div>
+    <form action="mailto:hello@aurainteriors.example" method="post" enctype="text/plain">
+      <label>Your name<input type="text" name="name" required autocomplete="name"></label>
+      <label>Phone number<input type="tel" name="phone" required autocomplete="tel"></label>
+      <label class="full">Email address<input type="email" name="email" required autocomplete="email"></label>
+      <label>Project type<select name="type"><option>Home</option><option>Office</option><option>Hotel or restaurant</option><option>Shop or clinic</option></select></label>
+      <label>Approximate budget<select name="budget"><option>Under ₹10 lakh</option><option>₹10 to 25 lakh</option><option>₹25 to 50 lakh</option><option>Above ₹50 lakh</option></select></label>
+      <label class="full">About your project<textarea name="message"></textarea></label>
+      <button class="btn gold" type="submit">Send enquiry</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 AURA INTERIORS. Demo website</span><a href="../index.html">Designed by Nexora Web Studio</a></div></footer>
+</body>
+</html>
